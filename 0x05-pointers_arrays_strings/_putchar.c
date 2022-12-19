@@ -1,13 +1,11 @@
-#include "main.h"
+#include <unistd.h>
 
 /**
- * reset_to_98 -> a function to update the reference of a pointer
- * @n: pointer to n to be updated
- *
- * Return: n
+ * _putchar - write character c to stout
+ * @c: char to be printed
+ * Return: on success 1
  */
-
-void reset_to_98(int *n)
+int _putchar(char c)
 {
-	*n = 98;
+	return (write(1, &c, 1));
 }
