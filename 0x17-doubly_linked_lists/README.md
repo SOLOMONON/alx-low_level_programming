@@ -1,1 +1,1 @@
-Python is an interpreted, object-oriented, high-level programming language with dynamic semantics. Its high-level built in data structures, combined with dynamic typing and dynamic binding, make it very attractive for Rapid Application Development, as well as for use as a scripting or glue language to connect existing components togethe
+A doubly linked list is a data structure which consists of nodes which have data, a pointer to the next node, and also a pointer to the previous node
