@@ -1,12 +1,10 @@
-#!/usr/bin/python3
-import random
-import ctypes
+#ifndef _100_OPERATIONS_H_
+#define _100_OPERATIONS_H_
 
-cops = ctypes.CDLL('./100-operations.so')
-a = random.randint(-111, 111)
-b = random.randint(-111, 111)
-print("{} + {} = {}".format(a, b, cops.add(a, b)))
-print("{} - {} = {}".format(a, b, cops.sub(a, b)))
-print("{} x {} = {}".format(a, b, cops.mul(a, b)))
-print("{} / {} = {}".format(a, b, cops.div(a, b)))
-print("{} % {} = {}".format(a, b, cops.mod(a, b)))
+int add(int num1, int num2);
+int sub(int num1, int num2);
+int mul(int num1, int num2);
+int div(int num1, int num2);
+int mod(int num1, int num2);
+
+#endif /*_100_OPERATIONS_H_*/
