@@ -1,16 +1,21 @@
-#!/usr/bin/python3
-"""1-my_list module
-"""
+#include "hash_tables.h"
 
+/**
+ * hash_djb2 - function that generates a random number through
+ * a string given (hash number)
+ *
+ * @str: string
+ * Return: hash number
+ */
+unsigned long int hash_djb2(const unsigned char *str)
+{
+	unsigned long int hash;
+	int c;
 
-class MyList(list):
-    """_A class that inherits from list
-    Args:
-        list (_type_): _description_
-    """
-    def print_sorted(self):
-        """Prints the sorted list
-        """
-        new_list = self[:]
-        new_list.sort()
-        print("{}".format(new_list))
+	hash = 5381;
+	while ((c = *str++))
+	{
+		hash = ((hash << 5) + hash) + c; /* hash * 33 + c */
+	}
+	return (hash);
+}
