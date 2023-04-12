@@ -1,16 +1,15 @@
-#!/usr/bin/python3
-"""Module 2-is_same_class
-"""
+#include "hash_tables.h"
 
-
-def is_same_class(obj, a_class):
-    """Checks if an object is an instance of a class
-    Args:
-        obj (_object): _description_
-        a_class (class): _description_
-    Returns:
-        True: if object is an instance of class
-        False: if it is not
-    """
-
-    return True if type(obj) is a_class else Fals
+/**
+ * key_index - Get the index at which a key/value
+ *      pair should be stored in array of a hash table.
+ * @key: The key to get the index of.
+ * @size: The size of the array of the hash table.
+ *
+ * Return: The index of the key.
+ * Description: Uses the djb2 algorithm.
+ */
+unsigned long int key_index(const unsigned char *key, unsigned long int size)
+{
+	return (hash_djb2(key) % size);
+}
